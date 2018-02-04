@@ -1,3 +1,30 @@
 <resources>
     <string name="app_name">GithubTest</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!--Network error-->
+    <string name="common_network_error">Something went wrong.</string>
+
+    <!--Menu-->
+    <string name="menu_dashboard">Dashboard</string>
+    <string name="menu_search">Search</string>
+
+    <!--Search-->
+    <string name="search_activity_title">Search</string>
+    <string name="search_activity_results_title">Users</string>
+    <string name="search_username_hint">username</string>
+    <string name="search_button">search</string>
+
+    <!--Users-->
+    <string name="user_activity_title">User</string>
+
+    <!--Repository-->
+    <string name="repository_activity_title">Repository</string>
+    <string name="repository_activity_language">language</string>
+    <string name="repository_activity_stars">stars</string>
+    <string name="repository_activity_creation_date">creation date</string>
+    <string name="repository_activity_update_date">update date</string>
+
 </resources>

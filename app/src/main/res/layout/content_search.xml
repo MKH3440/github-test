@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.mkh3440.githubtest.ui.search.SearchActivity"
+    tools:showIn="@layout/activity_search">
+
+    <include
+        android:id="@+id/loader"
+        layout="@layout/view_loader"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <EditText
+        android:id="@+id/activitySearchSearchBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/search_username_hint"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/activitySearchSearchButton"/>
+
+    <Button
+        android:id="@+id/activitySearchSearchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/activitySearchSearchBar"
+        android:background="@color/colorAccent"
+        android:text="@string/search_button"/>
+
+</android.support.constraint.ConstraintLayout>

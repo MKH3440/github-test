@@ -4,6 +4,8 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'kotlin-kapt'
+
 android {
     compileSdkVersion 27
     defaultConfig {
@@ -22,14 +24,42 @@ android {
     }
 }
 
+androidExtensions {
+    experimental = true
+}
+
 ext {
     supportLibrary = "27.0.2"
     junit = "4.12"
+    retrofit = "2.3.0"
+    constraintLayout = "1.0.2"
+    dagger = "2.7"
+    rxAndroid = "2.0.1"
+    picasso = "2.5.2"
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+//    kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+//    support library
     implementation "com.android.support:appcompat-v7:${supportLibrary}"
+    implementation "com.android.support:support-v4:${supportLibrary}"
+    implementation "com.android.support:design:${supportLibrary}"
+//    constraint layout
+    implementation "com.android.support.constraint:constraint-layout:${constraintLayout}"
+//    junit
     testImplementation "junit:junit:${junit}"
+//    retrofit
+    compile "com.squareup.retrofit2:retrofit:${retrofit}"
+    compile "com.squareup.retrofit2:adapter-rxjava2:${retrofit}"
+    compile "com.squareup.retrofit2:converter-gson:${retrofit}"
+//    dagger
+    compile "com.google.dagger:dagger:${dagger}"
+    kapt "com.google.dagger:dagger-compiler:${dagger}"
+    annotationProcessor "com.google.dagger:dagger-compiler:${dagger}"
+//    rx android
+    compile "io.reactivex.rxjava2:rxandroid:${rxAndroid}"
+//    picasso
+    compile "com.squareup.picasso:picasso:${picasso}"
 }
